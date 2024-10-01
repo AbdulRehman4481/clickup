@@ -1,10 +1,8 @@
-import React from "react";
-import logo from "../../../public/assets/images/logo-v3-clickup-brain-light-v2.svg";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 import image1 from "../../../public/assets/images/ai-bg-asset.png";
 import image2 from "../../../public/assets/images/ai-module-mobile.webp";
-import Image from "next/image";
-import { div } from "framer-motion/client";
-import { FaArrowRight } from "react-icons/fa";
+import logo from "../../../public/assets/images/logo-v3-clickup-brain-light-v2.svg";
 
 export default function OpenAi() {
   return (

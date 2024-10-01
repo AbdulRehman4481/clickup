@@ -1,22 +1,19 @@
 "use client";
-import React, { useState, useRef } from "react";
-import { FaHashtag } from "react-icons/fa";
-import { SiGoogleforms } from "react-icons/si";
-import { GiElectric } from "react-icons/gi";
-import { LuAlarmClock } from "react-icons/lu";
-import { SlDocs } from "react-icons/sl";
-import { AiOutlineDashboard } from "react-icons/ai";
-import { TfiClipboard } from "react-icons/tfi";
-import { GoGoal } from "react-icons/go";
 import Image from "next/image";
+import { useRef, useState } from "react";
+import { AiOutlineDashboard } from "react-icons/ai";
+import { FaHashtag } from "react-icons/fa";
+import { GiArtificialIntelligence, GiElectric } from "react-icons/gi";
+import { GoGoal } from "react-icons/go";
+import { LuAlarmClock } from "react-icons/lu";
+import { SiGoogleforms } from "react-icons/si";
+import { TfiClipboard } from "react-icons/tfi";
 import image1 from "../../../public/assets/images/home-tabs-v3-ai-desktop.png";
 import image2 from "../../../public/assets/images/home-tabs-v3-automations-desktop.png";
-import image3 from "../../../public/assets/images/home-tabs-v3-docs-desktop.png";
 import image4 from "../../../public/assets/images/home-tabs-v3-forms-desktop.png";
 import image5 from "../../../public/assets/images/home-tabs-v3-goals-desktop.png";
 import image6 from "../../../public/assets/images/home-tabs-v3-time-tracking-desktop.png";
 import lines from "../../../public/assets/images/transition-lines.svg";
-import { GiArtificialIntelligence } from "react-icons/gi";
 
 export default function HeroSlider() {
   const icons = [

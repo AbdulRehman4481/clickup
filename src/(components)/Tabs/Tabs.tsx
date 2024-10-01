@@ -1,16 +1,15 @@
-import React from "react";
-import pmo from "../../../public/assets/images/pmo.svg";
-import market from "../../../public/assets/images/market.svg";
-import product from "../../../public/assets/images/product.svg";
-import enger from "../../../public/assets/images/enger.svg";
+import { FaStar } from "react-icons/fa6";
+import { GiCheckMark } from "react-icons/gi";
 import agencies from "../../../public/assets/images/agenices.svg";
 import agent from "../../../public/assets/images/convene-headshot.png";
-import setting from "../../../public/assets/images/setting.svg";
-import docs from "../../../public/assets/images/docs.svg";
-import optimize from "../../../public/assets/images/optimiz.svg";
 import dashboard from "../../../public/assets/images/dashboard.svg";
-import { GiCheckMark } from "react-icons/gi";
-import { FaStar } from "react-icons/fa6";
+import docs from "../../../public/assets/images/docs.svg";
+import enger from "../../../public/assets/images/enger.svg";
+import market from "../../../public/assets/images/market.svg";
+import optimize from "../../../public/assets/images/optimiz.svg";
+import pmo from "../../../public/assets/images/pmo.svg";
+import product from "../../../public/assets/images/product.svg";
+import setting from "../../../public/assets/images/setting.svg";
 
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
@@ -60,7 +59,7 @@ export default function Tabs() {
               The complete agency solution
             </h2>
             <p className="font-semibold text-lg my-3">
-              Deliver higher quality client work that's more profitable, faster.
+              Deliver higher quality client work thats more profitable, faster.
             </p>
             <div>
               <p className="flex my-3">

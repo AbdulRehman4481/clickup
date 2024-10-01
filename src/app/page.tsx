@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <Collaboration />
       <OpenAi />
-      <VideoSlider />
+      {/* <VideoSlider /> */}
       <Tabs />
       <Work />
     </>

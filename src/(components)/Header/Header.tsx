@@ -1,15 +1,15 @@
 import {
+  Button,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
 } from "@nextui-org/react";
 import Image from "next/image";
-import logo from "../../../public/assets/images/logo-v3-clickup-light (1).svg";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoMenu } from "react-icons/io5";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import logo from "../../../public/assets/images/logo-v3-clickup-light (1).svg";
 export default function Header() {
   return (
     <div className="sticky mt-[20px] top-[20px] flex justify-center max-[950px]:justify-between w-full  z-50 ">

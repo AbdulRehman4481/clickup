@@ -13,7 +13,7 @@ export default function Hero() {
           <strong>Now with Chat, powered by AI.</strong>
           One place for teams of all sizes to communicate and get work done.
         </p>
-        <button className="bg-primary-gradient w-[442px] justify-center mt-5  flex items-center text-2xl font-medium text-white px-10 py-3 max-[450px]:px-5 max-[450px]:text-lg rounded-xl transform transition-transform duration-300 hover:translate-y-[1px]">
+        <button className="bg-primary-gradient w-[442px] max-[500px]:w-[300px]  justify-center mt-5  flex items-center text-2xl font-medium text-white px-10 py-3 max-[500px]:px-5 max-[500px]:text-lg rounded-xl transform transition-transform duration-300 hover:translate-y-[1px]">
           {" "}
           Get Started.its Free <FaArrowRight className="mx-2 " />
         </button>

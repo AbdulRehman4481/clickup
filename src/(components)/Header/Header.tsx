@@ -12,12 +12,12 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoMenu } from "react-icons/io5";
 export default function Header() {
   return (
-    <div className="flex sticky mt-[20px] top-[20px]  justify-center items-center z-50 ">
-      <Navbar className="my mx-5 max-w-[1100px]">
-        <NavbarBrand className="max-[950px]:flex shadow-sm  justify-around   border border-[#CECEEA] w-[211px]  py-[10px] px-[12.25px]  rounded-[14px] h-[46px]">
+    <div className="sticky mt-[20px] top-[20px] flex justify-center max-[950px]:justify-between w-full  z-50 ">
+      <Navbar className="my mx-5 max-w-[1100px] flex justify-center">
+        <NavbarBrand className="max-[950px]:flex shadow-sm  justify-around  max-[500px]:w-[100px] border border-[#CECEEA]   py-[10px] px-[12.25px]  rounded-[14px] h-[46px]">
           <Image src={logo} width={85} height={21} alt="logo" />
-          <div className="h-6  w-[0.8px] bg-black" />
-          <span className="text-[10px] font-semibold font-axiforma leading-3">
+          <div className="h-6  w-[0.8px] bg-black max-[500px]:hidden mx-2" />
+          <span className="text-[10px] font-semibold font-axiforma max-[500px]:hidden leading-3">
             The everything
             <br /> app for work
           </span>
@@ -47,7 +47,7 @@ export default function Header() {
               Pricing{" "}
             </button>
           </NavbarItem>
-          <NavbarItem className="hover:bg-[#f1f2f3]  rounded-lg max-[1052px]:hidden">
+          <NavbarItem className="hover:bg-[#f1f2f3]  rounded-lg max-[1112px]:hidden">
             <button className="text-sm p-2 rounded-xl hover:bg-[#f1f2f3] font-[family-name:var(--font-axiforma-sans)]">
               Enterprise
             </button>
@@ -56,7 +56,7 @@ export default function Header() {
         <div className="flex gap-3">
         <NavbarContent
           justify="end"
-          className="border-[#CECEEA] border p-1 shadow-sm rounded-xl max-[950px]:hidden"
+          className="border-[#CECEEA] border p-1 shadow-sm rounded-xl max-[1005px]:hidden"
         >
           <NavbarItem className="flex  rounded-lg ">
             <Link

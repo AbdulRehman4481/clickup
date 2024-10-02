@@ -264,7 +264,7 @@ export default function Tabs() {
             <div className="border-2 rounded-lg ">
               {tabData[selected].tab.map((data, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <div className="flex  p-4">
                       <Image
                         src={data.icon}
@@ -277,7 +277,7 @@ export default function Tabs() {
                     </div>
 
                     <hr />
-                  </>
+                  </div>
                 );
               })}
             </div>

@@ -89,7 +89,7 @@ export default function Collaboration() {
           <p className="text-white text-[14px] font-bold font-[family-name:var(--font-axiforma-sans)] leading-[21px]">
             Ditch the needless meetings and repetitive updates. With a single
             source of truth for all ongoing projects across your entire org, you
-            get a crystal-clear view of what's happening (or not), and who's
+            get a crystal-clear view of what&apos;s happening (or not), and who&apos;s
             responsible.
           </p>
           <div className=" flex flex-wrap">
@@ -113,7 +113,7 @@ export default function Collaboration() {
           Automate work
           </h1>
           <p className="text-white text-[14px] font-bold font-[family-name:var(--font-axiforma-sans)] leading-[21px]">
-          Streamline business processes without breaking a sweat. Whether it's onboarding employees, handling IT requests, or managing expense reimbursements, you can automate it all with powerful no-code Automations.
+          Streamline business processes without breaking a sweat. Whether it&apos;s onboarding employees, handling IT requests, or managing expense reimbursements, you can automate it all with powerful no-code Automations.
           </p>
           <div className=" flex flex-wrap">
             <span className="mt-[20px] text-[12px] font-medium rounded-lg  px-[11px] pt-[5px] border-[#00000080] shadow-custom-shadow border-[0.8px] pb-[5px]  bg-white font-[family-name:var(--font-axiforma-sans)]">

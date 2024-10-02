@@ -9,8 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'custom-shadow': '0 3px 5px 0 rgba(67, 46, 134, 0.05)',
+      },
       fontFamily: {
-        axiforma: ['Axiforma', 'sans-serif'],
+        axiforma: ['Axiforma'],
       },
       backgroundImage: {
         'primary-image': "url('/assets/images/hOMQep.svg')",
@@ -31,6 +34,12 @@ const config: Config = {
           "linear-gradient(351deg, #5037E7 12.36%, #EB00FF 124.69%)",
         "orange-gradient":
           "linear-gradient(168deg, #D613EE -55.05%, #FF674E 64.52%)",
+        "pink-blue-gradient":
+          "linear-gradient(154deg, rgb(255, 120, 97) -38.54%, rgb(214, 19, 238) 99.56%)",
+        "pink-blue-2-gradient":
+          "linear-gradient(152deg, rgb(235, 0, 255) 6.96%, rgb(80, 55, 231) 107.25%)",
+        "white-blue-gradient":
+          "linear-gradient(154deg, rgb(103, 49, 236) -38.54%, rgb(80, 210, 255) 99.56%)",
       },
       colors: {
         background: "var(--background)",

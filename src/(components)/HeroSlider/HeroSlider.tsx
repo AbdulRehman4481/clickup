@@ -17,16 +17,16 @@ import lines from "../../../public/assets/images/transition-lines.svg";
 
 export default function HeroSlider() {
   const icons = [
-    { id: 1, icon: <FaHashtag />, image: image1, title: "Chat" },
-    { id: 2, icon: <AiOutlineDashboard />, image: image2, title: "Dashboard" },
-    { id: 4, icon: <FaHashtag />, image: image4, title: "Docs" },
-    { id: 5, icon: <LuAlarmClock />, image: image5, title: "Time Tracking" },
-    { id: 6, icon: <TfiClipboard />, image: image6, title: "Whiteboard" },
-    { id: 7, icon: <SiGoogleforms />, image: image4, title: "Forms" },
-    { id: 9, icon: <GiElectric />, image: image1, title: "Automation" },
-    { id: 10, icon: <GoGoal />, image: image5, title: "Goals" },
-    { id: 8, icon: <GiElectric />, image: image6, title: "Electric" },
-    { id: 3, icon: <GiArtificialIntelligence />, image: image4, title: "AI" },
+    { id: 1, icon: <FaHashtag size={26}/>, image: image1, title: "Chat" },
+    { id: 2, icon: <AiOutlineDashboard size={26}/>, image: image2, title: "Dashboard" },
+    { id: 4, icon: <FaHashtag size={26} />, image: image4, title: "Docs" },
+    { id: 5, icon: <LuAlarmClock size={26}/>, image: image5, title: "Time Tracking" },
+    { id: 6, icon: <TfiClipboard size={26}/>, image: image6, title: "Whiteboard" },
+    { id: 7, icon: <SiGoogleforms size={26}/>, image: image4, title: "Forms" },
+    { id: 9, icon: <GiElectric size={26}/>, image: image1, title: "Automation" },
+    { id: 10, icon: <GoGoal size={26}/>, image: image5, title: "Goals" },
+    { id: 8, icon: <GiElectric size={26} />, image: image6, title: "Electric" },
+    { id: 3, icon: <GiArtificialIntelligence size={26} />, image: image4, title: "AI" },
   ];
 
   const [selected, setSelected] = useState(0);
@@ -45,25 +45,28 @@ export default function HeroSlider() {
   };
 
   return (
-    <div className="bg-secondary-gradient mt-14" >
+    <div className="bg-secondary-gradient mt-[50px]" >
       <div className="flex justify-center items-center">
-        <div className="relative flex justify-center items-center  w-[900px] overflow-hidden">
+        <div className="relative flex justify-center items-center  w-[900px] overflow-hidden h-[150px]">
           <div className="flex transition-all duration-500 ease-in-out">
             {icons.map((item, index) => (
               <div
                 key={item.id}
                 onClick={() => handleClick(index)}
-                className={`text-center text-2xl rounded-2xl flex flex-col items-center cursor-pointer transition-transform duration-500 ease-in-out`}
-                style={{
-                  transform: `translateX(${(index - selected) * 30}px)`,
-                }}
+                className={`text-center text-2xl rounded-2xl flex flex-col items-center cursor-pointer transition-transform duration-500 ease-in-out
+                  `}
+                  style={{
+                    transform: `translate(${(index - selected) * 50}px, ${
+                      index === selected ? '-10px' : '0px'
+                    })`,
+                  }}
                 ref={(el) => {
                   iconRefs.current[index] = el;
                 }} 
               >
                 <div
                   className={` w-fit backdrop-blur-lg p-3 rounded-2xl transition-transform duration-500 ease-in-out ${
-                    index === selected ? "text-white p-4 bg-blue-950/100 z-10" : "border-white bg-white/20 border"
+                    index === selected ? "text-white p-5  bg-blue-950/100 z-10" : "border-white bg-white/20 border"
                   }`}
                 >
                   {item.icon}
@@ -81,7 +84,7 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      <div className="mt-10 flex relative justify-center text-center items-center flex-col">
+      <div className=" flex relative justify-center text-center items-center flex-col">
         <div className="border-white  bg-white/20 border rounded-[20px] p-2">
           <Image
             src={icons[selected].image}
@@ -90,11 +93,11 @@ export default function HeroSlider() {
             height={700}
             className="rounded-[20px] shadow-lg"
           />
-            <div className="absolute bottom-[30%] blur-xl left-0 w-full h-[30%]  bg-gradient-to-t from-white via-white/100 to-transparent rounded-lg" />
+            <div className="absolute bottom-[30%] blur-xl left-0 w-full h-[30%] max-[800px]:blur-md max-[800px]:hidden   bg-gradient-to-t from-white via-white/100 to-transparent rounded-lg" />
         </div>
-        <Image src={lines} alt="lines" width={800} height={400} className="" />
+        <Image src={lines} alt="lines" width={1064} height={400} className="" />
         <div>
-          <h1 className="text-[41px] font-[900] leading-snug">
+          <h1 className="text-[41px] font-[900] leading-snug text-[#24223E]">
             Save time and get
             <br /> more done
           </h1>

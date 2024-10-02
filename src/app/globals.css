@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 #heroSlider .slick-dots {
   position: absolute;
   bottom: 70%;

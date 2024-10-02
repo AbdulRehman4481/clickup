@@ -82,7 +82,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center w-full gap-10 mt-10 " >
+      <div className="flex justify-center w-full gap-10 mt-10 ">
         <div className="flex justify-around flex-row w-[700px] max-[1150px]:w-[1050px] relative h-[372px] bg-purple-gradient  rounded-lg">
           <div className="p-10">
             <h1 className="text-xl font-extrabold text-white">
@@ -125,7 +125,7 @@ export default function Work() {
         </div>
       </div>
       <div className="flex justify-center  min-[1150px]:hidden gap-10  my-10">
-      <div className="max-w-[326px] h-full max-[1150px]:max-w-[50%]  bg-black-gradient rounded-lg ">
+        <div className="max-w-[326px] h-full max-[1150px]:max-w-[50%]  bg-black-gradient rounded-lg ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               Search everything
@@ -136,7 +136,7 @@ export default function Work() {
             </p>
           </div>
           <div className=" mt-3">
-            <Image src={image6} alt="image"  className="rounded-b-lg"/>
+            <Image src={image6} alt="image" className="rounded-b-lg" />
           </div>
         </div>
         <div className="max-w-[326px] h-full max-[1150px]:max-w-[50%] bg-orange-gradient rounded-lg ">
@@ -154,7 +154,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-      
+
       <div className="flex flex-row-reverse justify-center gap-10 mt-10 max-[1150px]:mx-1">
         <div className="flex flex-row w-[700px] max-[1150px]:w-[1150px] relative h-[372px] bg-[#0C1947]  rounded-lg">
           <div className="p-10">

@@ -344,7 +344,7 @@ export default function DropDown1() {
                     <div>
                       <h1>Import</h1>
                       <ul className="space-y-2 pr-[40px]">
-                        {/* {Integrations.map.((item, i) => {
+                        {Integrations.slice(0,8).map((item, i) => {
                           return (
                             <p
                               key={i}
@@ -360,7 +360,7 @@ export default function DropDown1() {
                               {item.name}
                             </p>
                           );
-                        })} */}
+                        })}
                       </ul>
                     </div>
                     <div className="pr-[20px]">

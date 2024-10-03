@@ -39,7 +39,7 @@ import { FaWpforms } from "react-icons/fa6";
 import { RxInput } from "react-icons/rx";
 import { LuInbox } from "react-icons/lu";
 import { TbStatusChange } from "react-icons/tb";
-import clickUpLogo from "../../public/assets/images/clickup.svg";
+import clickUpLogo from "../../public/assets/images/integrations-v5-sprite.png";
 import slack from "../../public/assets/images/slack-svgrepo-com.svg";
 import jira from "../../public/assets/images/jira-svgrepo-com.svg";
 import salesforce from "../../public/assets/images/salesforce-svgrepo-com.svg";

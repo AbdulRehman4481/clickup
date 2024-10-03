@@ -23,6 +23,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { GiElectric } from "react-icons/gi";
 import { TbLayoutDashboard } from "react-icons/tb";
 import { dropdown } from "@nextui-org/react";
+import { div } from "framer-motion/client";
 type Item = {
   icon: JSX.Element;
   title: string;
@@ -82,23 +83,25 @@ const FeaturedSection = () => {
 const IntegrationSection = () => {
   return (
     <>
-      <div className="container pt-[10px] w-full">
-        <div className="grid grid-cols-3 gap-x-10">
+      <div className="container pt-[10px] w-[600px]">
+        <div className="grid grid-cols-3  justify-items-between">
           {Integrations.map((item, i) => {
             return (
-              <p
-                key={i}
-                className="text-[#514B81]   text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[6px] pl-[2px]  font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex "
-              >
-                <Image
-                  src={item.icon}
-                  alt={`${item.icon}`}
-                  width={20}
-                  height={20}
-                />
-                <span className="text-[16px] mr-[2px]"></span>
-                {item.name}
-              </p>
+              <div key={i}>
+                <p
+                  
+                  className="text-[#514B81] text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[6px] pl-[2px] font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={`${item.icon}`}
+                    width={15}
+                    height={15}
+                  />
+                  <span className="text-[16px] mr-[2px]"></span>
+                  {item.name}
+                </p>
+              </div>
             );
           })}
         </div>
@@ -112,17 +115,15 @@ export default function DropDown1() {
     "Capabilities"
   );
   const handleDropDown = (dropdown: string) => {
-    if (openDropdown === dropdown) {
       setOpenDropdown(dropdown);
-    } else {
-      setOpenDropdown(dropdown);
-    }
+    
   };
   return (
     <>
-      <div className="fixed inset-0 bg-[#292D34]/20 opacity-50 z-40 " />
-      <div className="absolute top-[12%] left-[15%] rounded-[14px]  z-50">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA]  w-[1080px]  rounded-[14px]">
+      <div className="fixed inset-0 bg-[#292D34]/20 opacity-50 z-40" />
+
+      <div className="absolute  left-[15%] top-20  rounded-[14px] z-50 w-screen  ">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA]  max-w-[1080px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
               <div
@@ -336,15 +337,17 @@ export default function DropDown1() {
                     <IntegrationSection />
                     <div>
                       <button className="my-[12px] mb-6 bg-[#ceceea]/20  hover:text-black px-3 rounded-[12px]  text-[#514B81]  py-2 w-full">
-                        See All Features
+                        See All Integration
                       </button>
                     </div>
                   </div>
-                  <div className=" flex flex-col  justify-around  bg-small-green-gradient  pl-[20px] rounded-tr-xl border-l-1 border-dashed">
+                  <div className=" flex flex-col  px-14  justify-around    pl-[20px] rounded-tr-xl border-l-1 border-dashed">
                     <div>
-                      <h1>Import</h1>
-                      <ul className="space-y-2 pr-[40px]">
-                        {Integrations.slice(0,8).map((item, i) => {
+                      <h1 className="font-bold font-[family-name:var(--font-axiforma-sans)] text-sm">
+                        Import
+                      </h1>
+                      <ul className=" pr-[40px]">
+                        {Integrations.slice(0, 8).map((item, i) => {
                           return (
                             <p
                               key={i}
@@ -353,8 +356,8 @@ export default function DropDown1() {
                               <Image
                                 src={item.icon}
                                 alt={`${item.icon}`}
-                                width={20}
-                                height={20}
+                                width={15}
+                                height={15}
                               />
                               <span className="text-[16px] mr-[2px]"></span>
                               {item.name}
@@ -362,11 +365,6 @@ export default function DropDown1() {
                           );
                         })}
                       </ul>
-                    </div>
-                    <div className="pr-[20px]">
-                      <button className="bg-[#ceceea]/20  hover:text-black px-3 rounded-[12px]  text-[#514B81]  py-2 w-full">
-                        See Changelog
-                      </button>
                     </div>
                   </div>
                 </>
@@ -389,6 +387,7 @@ export default function DropDown1() {
           </div>
         </div>
       </div>
+
     </>
   );
 }

@@ -3,12 +3,12 @@ import { FaArrowRight } from "react-icons/fa";
 import image1 from "../../../public/assets/images/ai-bg-asset.png";
 import image2 from "../../../public/assets/images/ai-module-mobile.webp";
 import logo from "../../../public/assets/images/logo-v3-clickup-brain-light-v2.svg";
-
+// max-[700px]:h-[996px]
 export default function OpenAi() {
   return (
     <div className="flex justify-center items-center w-full  ">
       <div className="bg-gradient-to-r from-[#CECEEA] to-[#FA12E3] max-w-[70%] max-[1286px]:max-w-[90%] max-[1060px]:max-w-[98%] p-[1px] rounded-[14px]">
-      <div className="flex h-[440px] max-[700px]:h-[996px] max-[700px]:h-[800px]  max-[700px]:flex-col  bg-white   overflow-hidden   max-[975px]:justify-end max-[700px]:justify-between rounded-[14px]">
+      <div className="flex h-[440px]  max-[700px]:h-[800px]  max-[700px]:flex-col  bg-white   overflow-hidden   max-[975px]:justify-end max-[700px]:justify-between rounded-[14px]">
         <div className="pl-[64px] pt-[64px] max-w-[35%]  max-[975px]:pl-[10px] max-[975px]:absolute max-[700px]:static max-[700px]:top-5  max-[700px]:pt-5    max-[975px]:left-10 max-[850px]:max-w-[100%]">
           <Image src={logo} alt="logo" height={150} width={150} />
           <p className="font-[900] text-[34px] text-[#24223E] leading-[43px] ">

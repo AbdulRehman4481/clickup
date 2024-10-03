@@ -13,7 +13,7 @@ const config: Config = {
         'custom-shadow': '0 3px 5px 0 rgba(67, 46, 134, 0.05)',
       },
       fontFamily: {
-        axiforma: ['Axiforma'],
+        axiforma: ['Axiforma',"sans"],
       },
       backgroundImage: {
         'primary-image': "url('/assets/images/hOMQep.svg')",
@@ -40,6 +40,10 @@ const config: Config = {
           "linear-gradient(152deg, rgb(235, 0, 255) 6.96%, rgb(80, 55, 231) 107.25%)",
         "white-blue-gradient":
           "linear-gradient(154deg, rgb(103, 49, 236) -38.54%, rgb(80, 210, 255) 99.56%)",
+        "small-pink-gradient":
+          "linear-gradient(186.32deg, #ff22ca -92.99%, rgba(255, 34, 202, 0) 13.97%)",
+        "small-green-gradient":
+          "linear-gradient(186.32deg,#21c828 -92.99%,#fff 13.97%)",
       },
       colors: {
         background: "var(--background)",

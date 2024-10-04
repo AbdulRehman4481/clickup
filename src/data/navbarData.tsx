@@ -15,22 +15,30 @@ import {
   FaHeartbeat,
   FaRegClock,
   FaBell,
+  FaConnectdevelop,
+  FaRegCalendarAlt,
+  FaRegHeart,
 } from "react-icons/fa";
 const { MdTask } = require("react-icons/md");
 import { CgWebsite } from "react-icons/cg";
 import { CiViewBoard } from "react-icons/ci";
 import { IoStatsChartSharp } from "react-icons/io5";
-import { LuAlarmClock } from "react-icons/lu";
-import { RiBodyScanFill } from "react-icons/ri";
+import { LuAlarmClock, LuPencilLine } from "react-icons/lu";
+import { RiBodyScanFill, RiTeamFill, RiTeamLine } from "react-icons/ri";
 import { FaChartGantt } from "react-icons/fa6";
 import { FaFlag } from "react-icons/fa6";
 import { RiDashboard2Line } from "react-icons/ri";
 import { CiViewList } from "react-icons/ci";
 import { FaArrowsRotate } from "react-icons/fa6";
 import { BiSolidPieChartAlt2 } from "react-icons/bi";
-import { BsKanban } from "react-icons/bs";
+import { BsFillBuildingsFill, BsKanban } from "react-icons/bs";
 import { MdRebaseEdit } from "react-icons/md";
-import { SiGoogledocs } from "react-icons/si";
+import {
+  SiGooglecontaineroptimizedos,
+  SiGoogledocs,
+  SiMagento,
+  SiMarketo,
+} from "react-icons/si";
 import { SiWikipedia } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoMdSearch } from "react-icons/io";
@@ -63,6 +71,11 @@ import make from "../../public/assets/images/integrations-v4-sprite.png";
 import { Calendar } from "@nextui-org/react";
 import { ReactNode } from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { AiFillProject } from "react-icons/ai";
+import { GrTechnology } from "react-icons/gr";
+import sales from "../../public/assets/images/sales.png";
+import project from "../../public/assets/images/project-management.png";
+import market from "../../public/assets/images/marketing.png";
 
 export const projectManagementItems = [
   {
@@ -262,4 +275,101 @@ export const Integrations: IntegrationItem[] = [
   { name: "Calendly", icon: cal },
   { name: "Toggl", icon: toggl },
 ];
+
+export const Teams: companyType[] = [
+  {
+    title: "Project management",
+    description:
+      "Empower teams to achieve goals with efficient, clear project planning.",
+    icon: <AiFillProject />,
+  },
+  {
+    title: "Product development",
+    description:
+      "Accelerate innovation for faster, effective team-led product launches.",
+    icon: <FaConnectdevelop />,
+  },
+  {
+    title: "Operations",
+    description:
+      "Optimize workflows for increased team productivity and efficiency.",
+    icon: <SiGooglecontaineroptimizedos />,
+  },
+  {
+    title: "IT",
+    description:
+      "Improve IT operations with solutions fostering teamwork and efficiency.",
+    icon: <GrTechnology />,
+  },
+  {
+    title: "Marketing",
+    description:
+      "Drive marketing outcomes through collaborative strategy and teamwork.",
+    icon: <SiMarketo />,
+  },
+  {
+    title: "Human resources",
+    description:
+      "Enhance team engagement and efficiency with streamlined processes.",
+    icon: <RiTeamFill />,
+  },
+  {
+    title: "Sales",
+    description:
+      "Maximize sales with tools enhancing team efficiency and insight.",
+    icon: <FaRegCalendarAlt />,
+  },
+];
 export const newFeatures = ["Knowledge management", "Clips", "Mobile 3.0"];
+
+export interface companyType {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+export const companyTypes: companyType[] = [
+  {
+    title: "Enterprise",
+    description: "Strategic project planning for enterprise success.",
+    icon: <BsFillBuildingsFill />,
+  },
+  {
+    title: "Startup",
+    description: "Innovative tools for fast-paced startup growth.",
+    icon: <RiTeamLine />,
+  },
+  {
+    title: "Non-profit",
+    description: "Tools for impactful non-profit management.",
+    icon: <FaRegHeart />,
+  },
+  {
+    title: "Education",
+    description: "Streamlined workflows for educational productivity.",
+    icon: <LuPencilLine />,
+  },
+  {
+    title: "Agency",
+    description: "Collaborative solutions for agency efficiency.",
+    icon: <SiMagento />,
+  },
+];
+
+export const TemplateData = [
+  {
+    title: "Project Management",
+    description:
+      "Manage roadmaps, backlogs, bugs, agile dev, and documentation.",
+    icon: project,
+  },
+  {
+    title: "Sales/CRM",
+    description: "Manage leads, deals, and contacts.",
+    icon: sales,
+  },
+  {
+    title: "Marketing",
+    description: "Plan campaigns, organize assets, and create wikis.",
+    icon: market,
+  },
+];

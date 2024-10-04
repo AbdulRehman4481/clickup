@@ -120,10 +120,9 @@ export default function DropDown1() {
   };
   return (
     <>
-      <div className="fixed inset-0 bg-[#292D34]/20 opacity-50 z-40" />
 
-      <div className="absolute  left-[15%] top-20  rounded-[14px] z-50 w-screen  ">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA]  max-w-[1080px]  rounded-[14px]">
+      <div className="absolute  flex justify-center top-14  rounded-[14px]  max-[1012px]:hidden z-50 ">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] max-[1082px]:w-[1040px] max-[1045px]:w-[1010px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
               <div
@@ -212,7 +211,7 @@ export default function DropDown1() {
             <div className="flex flex-row relative justify-between w-full">
               {openDropdown === "Capabilities" && (
                 <>
-                  <div className="flex gap-5 pt-4 pl-2  ">
+                  <div className="flex gap-5  pt-4 pl-2  ">
                     <div className=" ">
                       <DropDownSection
                         title="Project Management"

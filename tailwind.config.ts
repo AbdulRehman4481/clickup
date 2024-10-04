@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       boxShadow: {
         'custom-shadow': '0 3px 5px 0 rgba(67, 46, 134, 0.05)',
+        'purple-shadow': '0px 3px 3px 0px rgba(119,18,252,0);',
       },
       fontFamily: {
         axiforma: ['Axiforma',"sans"],

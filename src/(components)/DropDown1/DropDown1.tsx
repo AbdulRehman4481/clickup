@@ -18,16 +18,19 @@ import {
   workflowsItems,
 } from "../../data/navbarData";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { GiElectric } from "react-icons/gi";
 import { TbLayoutDashboard } from "react-icons/tb";
-import { dropdown } from "@nextui-org/react";
-import { div } from "framer-motion/client";
 type Item = {
   icon: JSX.Element;
   title: string;
 };
+
+interface ProductTabsType {
+  title: string;
+  icon: ReactNode;
+}
 
 interface DropDownSectionType {
   title: string;
@@ -43,14 +46,16 @@ const DropDownSection = ({ title, items }: DropDownSectionType) => {
         </h1>
         {items.map((item, i) => {
           return (
-            <p
+            <a
+            href="tasks"
               key={i}
+              
               className="text-[#514B81]  text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[4px] mb-1 font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex "
             >
               {" "}
               <span className="text-[16px] mr-[2px]">{item.icon}</span>
               {item.title}
-            </p>
+            </a>
           );
         })}
       </div>
@@ -88,10 +93,7 @@ const IntegrationSection = () => {
           {Integrations.map((item, i) => {
             return (
               <div key={i}>
-                <p
-                  
-                  className="text-[#514B81] text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[6px] pl-[2px] font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex"
-                >
+                <p className="text-[#514B81] text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[6px] pl-[2px] font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex">
                   <Image
                     src={item.icon}
                     alt={`${item.icon}`}
@@ -110,108 +112,74 @@ const IntegrationSection = () => {
   );
 };
 
+const ProductTabs: ProductTabsType[] = [
+  {
+    icon: <GiElectric className="mr-1 text-[16px] mb-1" />,
+    title: "Capabilities",
+  },
+  {
+    icon: <TbLayoutDashboard className="mr-1 text-[16px] mb-1" />,
+    title: "All Features",
+  },
+  {
+    icon: <LuPuzzle className="mr-1 text-[16px] mb-1" />,
+    title: "Integrations",
+  },
+];
+
 export default function DropDown1() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(
     "Capabilities"
   );
   const handleDropDown = (dropdown: string) => {
-      setOpenDropdown(dropdown);
-    
+    setOpenDropdown(dropdown);
   };
   return (
     <>
-
-      <div className="absolute  flex justify-center top-14  rounded-[14px]  max-[1012px]:hidden z-50 ">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] max-[1082px]:w-[1040px] max-[1045px]:w-[1010px]  rounded-[14px]">
+      <div className="absolute  flex justify-center top-14  rounded-[14px]  custom-max-1012:hidden z-50 ">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1082:w-[1040px] custom-max-1045:w-[1010px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
-              <div
-                onClick={() => {
-                  handleDropDown("Capabilities");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${
-                    openDropdown === "Capabilities"
-                      ? "bg-[#CECEEA]/30 text-black"
-                      : ""
-                  }
-                  
-                  `}
-              >
-                <span
-                  className={`font-bold text-[#514B81] text-[14px] flex items-center  group-hover:text-black
-                  ${openDropdown === "Capabilities" ? " text-black" : ""}
-                  `}
-                >
-                  <GiElectric className="mr-1 text-[16px] mb-1" />
-                  Capabilities
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "Capabilities" ? " text-black" : ""}
-                  `}
-                />
-              </div>
-              <div
-                onClick={() => {
-                  handleDropDown("All Features");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${
-                    openDropdown === "All Features"
-                      ? "bg-[#CECEEA]/30 text-black"
-                      : ""
-                  }
-                  `}
-              >
-                <span
-                  className={`font-bold text-[#514B81] text-[14px] flex items-center 
-                    ${openDropdown === "All Features" ? "text-black" : ""}
-                    group-hover:text-black`}
-                >
-                  <TbLayoutDashboard className="mr-1 text-[16px] mb-1" />
-                  All Features
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "All Features" ? " text-black" : ""}
-                  `}
-                />
-              </div>
-              <div
-                onClick={() => {
-                  handleDropDown("Integrations");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${
-                    openDropdown === "Integrations"
-                      ? "bg-[#CECEEA]/30 text-black"
-                      : ""
-                  }
-                  `}
-              >
-                <span
-                  className={`font-[850] leading-[21px] text-[#514B81] text-[14px] flex  items-center  group-hover:text-black 
-                  ${openDropdown === "Integrations" ? " text-black" : ""}
-                  `}
-                >
-                  <LuPuzzle className="mr-1 text-[16px] mb-1" />
-                  Integrations
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "Integrations" ? " text-black" : ""}
-                  `}
-                />
-              </div>
+              {ProductTabs.map((item, i) => {
+                return (
+                  <>
+                    <div
+                      key={i}
+                      onClick={() => {
+                        handleDropDown(item.title);
+                      }}
+                      className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
+                    ${
+                      openDropdown === item.title
+                        ? "bg-[#CECEEA]/30 text-black"
+                        : ""
+                    }
+                    
+                    `}
+                    >
+                      <span
+                        className={`font-bold text-[#514B81] text-[14px] flex items-center  group-hover:text-black
+                      ${openDropdown === item.title ? " text-black" : ""}
+                      `}
+                      >
+                        {item.icon}
+                        {item.title}
+                      </span>
+                      <FaChevronDown
+                        size={15}
+                        className={`-rotate-90  group-hover:text-black text-[#514B81]
+                      ${openDropdown === item.title ? " text-black" : ""}
+                      `}
+                      />
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div className="flex flex-row relative justify-between w-full">
               {openDropdown === "Capabilities" && (
                 <>
-                  <div className="flex gap-5  pt-4 pl-2  ">
+                  <div className="flex gap-10  pt-4 pl-2  ">
                     <div className=" ">
                       <DropDownSection
                         title="Project Management"
@@ -386,7 +354,6 @@ export default function DropDown1() {
           </div>
         </div>
       </div>
-
     </>
   );
 }

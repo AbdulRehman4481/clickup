@@ -16,7 +16,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Work() {
   return (
-    <div className="mx-5 max-[900px]:hidden">
+    <div className="mx-5 custom-max-900:hidden">
       <div className="text-center mt-20">
         <h1 className="text-4xl font-extrabold">
           Everything your team is looking for
@@ -29,7 +29,7 @@ export default function Work() {
         </p>
       </div>
       <div className="flex justify-center gap-10 ">
-        <div className="max-w-[326px] max-[1150px]:max-w-[50%] bg-primary-gradient rounded-lg">
+        <div className="max-w-[326px] custom-max-1150:max-w-[50%] bg-primary-gradient rounded-lg">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               AI-powered productivity
@@ -41,7 +41,7 @@ export default function Work() {
           </div>
           <Image src={image1} alt="image1" />
         </div>
-        <div className="max-w-[326px] max-[1150px]:max-w-[50%] bg-blue-gradient rounded-lg">
+        <div className="max-w-[326px] custom-max-1150:max-w-[50%] bg-blue-gradient rounded-lg">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               View work your way
@@ -53,7 +53,7 @@ export default function Work() {
           </div>
           <Image src={image2} alt="image1" className="mt-28" />
         </div>
-        <div className="max-w-[326px] max-[1150px]:hidden bg-dark-blue-gradient rounded-lg ">
+        <div className="max-w-[326px] custom-max-1150:hidden bg-dark-blue-gradient rounded-lg ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               View work your way
@@ -83,7 +83,7 @@ export default function Work() {
         </div>
       </div>
       <div className="flex justify-center w-full gap-10 mt-10 ">
-        <div className="flex justify-around flex-row w-[700px] max-[1150px]:w-[1050px] relative h-[372px] bg-purple-gradient  rounded-lg">
+        <div className="flex justify-around flex-row w-[700px] custom-max-1150:w-[1050px] relative h-[372px] bg-purple-gradient  rounded-lg">
           <div className="p-10">
             <h1 className="text-xl font-extrabold text-white">
               Plays well with others
@@ -109,7 +109,7 @@ export default function Work() {
             <Image src={image4} alt="imae" />
           </div>
         </div>
-        <div className="max-w-[326px] h-[372px] max-[1150px]:hidden bg-black-gradient rounded-lg ">
+        <div className="max-w-[326px] h-[372px] custom-max-1150:hidden bg-black-gradient rounded-lg ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               Search everything
@@ -125,7 +125,7 @@ export default function Work() {
         </div>
       </div>
       <div className="flex justify-center  min-[1150px]:hidden gap-10  my-10">
-        <div className="max-w-[326px] h-full max-[1150px]:max-w-[50%]  bg-black-gradient rounded-lg ">
+        <div className="max-w-[326px] h-full custom-max-1150:max-w-[50%]  bg-black-gradient rounded-lg ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               Search everything
@@ -139,7 +139,7 @@ export default function Work() {
             <Image src={image6} alt="image" className="rounded-b-lg" />
           </div>
         </div>
-        <div className="max-w-[326px] h-full max-[1150px]:max-w-[50%] bg-orange-gradient rounded-lg ">
+        <div className="max-w-[326px] h-full custom-max-1150:max-w-[50%] bg-orange-gradient rounded-lg ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               Stay ahead of what’s next
@@ -155,8 +155,8 @@ export default function Work() {
         </div>
       </div>
 
-      <div className="flex flex-row-reverse justify-center gap-10 mt-10 max-[1150px]:mx-1">
-        <div className="flex flex-row w-[700px] max-[1150px]:w-[1150px] relative h-[372px] bg-[#0C1947]  rounded-lg">
+      <div className="flex flex-row-reverse justify-center gap-10 mt-10 custom-max-1150:mx-1">
+        <div className="flex flex-row w-[700px] custom-max-1150:w-[1150px] relative h-[372px] bg-[#0C1947]  rounded-lg">
           <div className="p-10">
             <h1 className="text-[20px] font-bold text-white mb-10">
               Trusted by over 2,000,000 teams
@@ -203,7 +203,7 @@ export default function Work() {
             />
           </div>
         </div>
-        <div className="max-w-[326px] h-[372px] bg-orange-gradient rounded-lg max-[1050px]:hidden ">
+        <div className="max-w-[326px] h-[372px] bg-orange-gradient rounded-lg custom-max-1050:hidden ">
           <div className="pt-[28px] px-[31px]">
             <h1 className="text-xl font-extrabold text-white ">
               Stay ahead of what’s next

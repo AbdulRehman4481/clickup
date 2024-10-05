@@ -16,8 +16,16 @@
     display: none;
   }
 }
+
 .no-scroll {
   position: fixed;
   overflow-y: scroll;
   width: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+#sider::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, and Opera */
 }

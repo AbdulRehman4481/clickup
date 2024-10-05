@@ -76,7 +76,7 @@ export default function VideoSlider() {
   };
 
   return (
-    <div className="my-10 max-[900px]:hidden">
+    <div className="my-10 custom-max-900:hidden">
       <h1 className="text-center text-4xl font-bold my-3">
         Perfect fit for every team
       </h1>
@@ -104,18 +104,18 @@ export default function VideoSlider() {
                   Your browser does not support the video tag.
                 </video>
                 {!isPlaying[index] && (
-                  <div className="absolute  border-t-1 border-black bg-white/10 backdrop-blur-md group-hover:hidden rounded-b-2xl h-[40%]  bottom-0 mr-4 max-[1390px]:pt-2   p-4 ">
-                    <h1 className="text-white text-xl font-semibold max-[1180px]:text-base my-4 max-[1390px]:my-2">
+                  <div className="absolute  border-t-1 border-black bg-white/10 backdrop-blur-md group-hover:hidden rounded-b-2xl h-[40%]  bottom-0 mr-4 custom-max-1390:pt-2   p-4 ">
+                    <h1 className="text-white text-xl font-semibold custom-max-1180:text-base my-4 custom-max-1390:my-2">
                       Vela
                     </h1>
-                    <h1 className="text-white text-xl font-medium max-[1180px]:text-base font-[family-name:var(--font-axiforma-sans)] max-[1180px]:text-lg">
+                    <h1 className="text-white text-xl font-medium custom-max-1180:text-base font-[family-name:var(--font-axiforma-sans)] ">
                       &quot;ClickUp made our <br />
                       production team two-thirds more efficient&quot;
                     </h1>
-                    <h1 className="text-white mt-4 max-[1390px]:mt-1 max-[1180px]:text-base">
+                    <h1 className="text-white mt-4 custom-max-1390:mt-1 custom-max-1180:text-base">
                       Justin Kosmides
                     </h1>
-                    <h1 className="text-white font-semibold max-[1180px]:text-base">
+                    <h1 className="text-white font-semibold custom-max-1180:text-base">
                       CEO & Co Founder
                     </h1>
                   </div>

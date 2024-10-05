@@ -19,7 +19,7 @@ import {
   FaRegCalendarAlt,
   FaRegHeart,
 } from "react-icons/fa";
-const { MdTask } = require("react-icons/md");
+import { MdTask } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
 import { CiViewBoard } from "react-icons/ci";
 import { IoStatsChartSharp } from "react-icons/io5";
@@ -68,7 +68,6 @@ import trello from "../../public/assets/images/trello-svgrepo-com.svg";
 import toggl from "../../public/assets/images/toggl-svgrepo-com.svg";
 import cal from "../../public/assets/images/integrations-v3-sprite.png";
 import make from "../../public/assets/images/integrations-v4-sprite.png";
-import { Calendar } from "@nextui-org/react";
 import { ReactNode } from "react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { AiFillProject } from "react-icons/ai";

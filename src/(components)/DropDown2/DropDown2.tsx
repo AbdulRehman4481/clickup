@@ -11,7 +11,7 @@ import {
 } from "../../data/navbarData";
 
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { FaArrowRightLong, FaChevronDown } from "react-icons/fa6";
 import { RiTeamLine } from "react-icons/ri";
@@ -20,10 +20,6 @@ type Item = {
   title: string;
 };
 
-interface DropDownSectionType {
-  title: string;
-  items: Item[];
-}
 interface dataType {
   data: companyType[];
 }
@@ -31,7 +27,7 @@ interface dataType {
 const TeamSection = ({ data }: dataType) => {
   return (
     <>
-      <div className="container px-[10px] max-[1045px]:pl-[5px] pt-[20px] mb-[20px] ">
+      <div className="container px-[10px] custom-max-1045:pl-[5px] pt-[20px] mb-[20px] ">
         <div className="grid grid-cols-3 gap-y-4   gap-x-2">
           {data.map((item, i) => {
             return (
@@ -57,14 +53,14 @@ const TeamSection = ({ data }: dataType) => {
 const TemplateSection = () => {
   return (
     <>
-      <div className="container px-[10px] max-[1045px]:pl-[5px] pt-[20px] mb-[20px] ">
+      <div className="container px-[10px] custom-max-1045:pl-[5px] pt-[20px] mb-[20px] ">
         <div className="grid grid-cols-3 gap-4">
           {TemplateData.map((item, i) => {
             return (
-              <Card className=" max-[260px] shadow-md  border-[0.8px] border-[#524b81]/20 rounded-[14px] p-[10px] ">
+              <Card key={i} className=" max-w-[260px] shadow-md  border-[0.8px] border-[#524b81]/20 rounded-[14px] p-[10px] ">
                 <CardHeader className=" flex-col items-start ">
                   <Image
-                    alt="Card background"
+                  alt="Card background"
                     className="object-cover rounded-xl border-b-[0.8px] border-[#524b81]/20"
                     src={item.icon}
                     width={270}
@@ -89,6 +85,24 @@ const TemplateSection = () => {
     </>
   );
 };
+interface SloutionsTabType {
+  title: string;
+  icon: ReactNode;
+}
+const SloutionsTab: SloutionsTabType[] = [
+  {
+    icon: <RiTeamLine className="mr-1 text-[16px] mb-1" />,
+    title: "Team",
+  },
+  {
+    icon: <BsFillBuildingsFill className="mr-1 text-[16px] mb-1" />,
+    title: "Company type",
+  },
+  {
+    icon: <HiTemplate className="mr-1 text-[16px] mb-1" />,
+    title: "Templates",
+  },
+];
 
 export default function DropDown2() {
   const [openDropdown, setOpenDropdown] = useState<string | null>("Team");
@@ -97,88 +111,45 @@ export default function DropDown2() {
   };
   return (
     <>
-      <div className="absolute  flex justify-center top-14  rounded-[14px]  max-[1012px]:hidden z-50 ">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] max-[1082px]:w-[1040px] max-[1045px]:w-[1010px]  rounded-[14px]">
+      <div className="absolute  flex justify-center top-14  rounded-[14px]  custom-max-1012:hidden z-50 ">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1082:w-[1040px] custom-max-1045:w-[1010px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
-              <div
-                onClick={() => {
-                  handleDropDown("Team");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${openDropdown === "Team" ? "bg-[#CECEEA]/30 text-black" : ""}
-                  
-                  `}
-              >
-                <span
-                  className={`font-bold text-[#514B81] text-[14px] flex items-center  group-hover:text-black
-                  ${openDropdown === "Team" ? " text-black" : ""}
-                  `}
-                >
-                  <RiTeamLine className="mr-1 text-[16px] mb-1" />
-                  Team
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "Team" ? " text-black" : ""}
-                  `}
-                />
-              </div>
-              <div
-                onClick={() => {
-                  handleDropDown("Company type");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${
-                    openDropdown === "Company type"
-                      ? "bg-[#CECEEA]/30 text-black"
-                      : ""
-                  }
-                  `}
-              >
-                <span
-                  className={`font-bold text-[#514B81] text-[14px] flex items-center 
-                    ${openDropdown === "Company type" ? "text-black" : ""}
-                    group-hover:text-black`}
-                >
-                  <BsFillBuildingsFill className="mr-1 text-[16px] mb-1" />
-                  Company type
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "Company type" ? " text-black" : ""}
-                  `}
-                />
-              </div>
-              <div
-                onClick={() => {
-                  handleDropDown("Templates");
-                }}
-                className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
-                  ${
-                    openDropdown === "Templates"
-                      ? "bg-[#CECEEA]/30 text-black"
-                      : ""
-                  }
-                  `}
-              >
-                <span
-                  className={`font-[850] leading-[21px] text-[#514B81] text-[14px] flex  items-center  group-hover:text-black 
-                  ${openDropdown === "Templates" ? " text-black" : ""}
-                  `}
-                >
-                  <HiTemplate className="mr-1 text-[16px] mb-1" />
-                  Templates
-                </span>
-                <FaChevronDown
-                  size={15}
-                  className={`-rotate-90  group-hover:text-black text-[#514B81]
-                    ${openDropdown === "Templates" ? " text-black" : ""}
-                  `}
-                />
-              </div>
+              {SloutionsTab.map((item, i) => {
+                return (
+                  <>
+                    <div
+                      key={i}
+                      onClick={() => {
+                        handleDropDown(item.title);
+                      }}
+                      className={`flex items-center w-[190px] mb-2 py-[8px] px-[11px]  hover:bg-[#CECEEA]/30 rounded-[10px] font-[family-name:var(--font-axiforma-sans)] justify-between group cursor-pointer
+                    ${
+                      openDropdown === item.title
+                        ? "bg-[#CECEEA]/30 text-black"
+                        : ""
+                    }
+                    
+                    `}
+                    >
+                      <span
+                        className={`font-bold text-[#514B81] text-[14px] flex items-center  group-hover:text-black
+                      ${openDropdown === item.title ? " text-black" : ""}
+                      `}
+                      >
+                        {item.icon}
+                        {item.title}
+                      </span>
+                      <FaChevronDown
+                        size={15}
+                        className={`-rotate-90  group-hover:text-black text-[#514B81]
+                      ${openDropdown === item.title ? " text-black" : ""}
+                      `}
+                      />
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div className="flex flex-row relative justify-between w-full ">
               {openDropdown === "Team" && (
@@ -201,7 +172,8 @@ export default function DropDown2() {
                         template.{" "}
                       </p>
                       <button className="flex items-center font-[family-name:var(--font-axiforma-sans)] text-[12px] font-extrabold">
-                        Browse all templates <FaArrowRightLong  className="ml-2"/>
+                        Browse all templates{" "}
+                        <FaArrowRightLong className="ml-2" />
                       </button>
                     </div>
                   </div>

@@ -93,7 +93,7 @@ export default function HeroSlider() {
             height={700}
             className="rounded-[20px] shadow-lg"
           />
-            <div className="absolute bottom-[30%] blur-xl left-0 w-full h-[30%] max-[800px]:blur-md max-[800px]:hidden   bg-gradient-to-t from-white via-white/100 to-transparent rounded-lg" />
+            <div className="absolute bottom-[30%] blur-xl left-0 w-full h-[30%] custom-max-800:blur-md custom-max-800:hidden   bg-gradient-to-t from-white via-white/100 to-transparent rounded-lg" />
         </div>
         <Image src={lines} alt="lines" width={1064} height={400} className="" />
         <div>

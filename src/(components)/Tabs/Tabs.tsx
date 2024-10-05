@@ -197,13 +197,13 @@ export default function Tabs() {
     setSelected(index);
   };
   return (
-    <div className=" flex flex-col justify-center items-center m-6 max-[900px]:hidden">
+    <div className=" flex flex-col justify-center items-center m-6 custom-max-900:hidden">
       <div>
-        <div className="flex justify-center gap-10 max-[1177px]:gap-5 max-[1060px]:gap-2">
+        <div className="flex justify-center gap-10 custom-max-1177:gap-5 custom-max-1060:gap-2">
           {tabData.map((data, i) => {
             return (
               <div key={i} onClick={() => handleClick(i)}>
-                <div className="flex flex-col justify-center items-center border rounded-xl w-40 h-28 max-[1060px]:w-32 cursor-pointer  transform transition-transform duration-300 hover:translate-y-[1px]">
+                <div className="flex flex-col justify-center items-center border rounded-xl w-40 h-28 custom-max-1060:w-32 cursor-pointer  transform transition-transform duration-300 hover:translate-y-[1px]">
                   <Image src={data.image} alt="pmo" height={40} width={40} />
                   <span className="text-base font-bold text-[#514b81] my-2">
                     {data.imageTitle}
@@ -212,14 +212,14 @@ export default function Tabs() {
               </div>
             );
           })}
-          <div className="border rounded-xl flex flex-col justify-center items-center w-40 h-28 max-[1060px]:w-32 hover:shadow-lg hover:shadow-primary  transform transition-transform duration-300 hover:translate-y-[1px] cursor-pointer ">
+          <div className="border rounded-xl flex flex-col justify-center items-center w-40 h-28 custom-max-1060:w-32 hover:shadow-lg hover:shadow-primary  transform transition-transform duration-300 hover:translate-y-[1px] cursor-pointer ">
             <span className="text-base font-bold text-[#514b81] my-2">
               See All Items
             </span>
           </div>
         </div>
 
-        <div className="flex border-1 relative mt-5 w-full justify-center gap-10 rounded-lg  max-[1060px]:pl-[27px] max-[1060px]:gap-5 max-[980px]:pl-[17px] max-[980px]:gap-0">
+        <div className="flex border-1 relative mt-5 w-full justify-center gap-10 rounded-lg  custom-max-1060:pl-[27px] custom-max-1060:gap-5 custom-max-980:pl-[17px] custom-max-980:gap-0">
           <div className="max-w-[500px] pt-[50px] pb-[50px] pl-[47px]">
             <h2 className="text-2xl font-bold my-3">
               {tabData[selected].mainTitle}
@@ -260,7 +260,7 @@ export default function Tabs() {
             </div>
           </div>
               <Image src={curve} alt="curve" className=""/>
-          <div className="mx-10 max-[950px]:mx-3 pt-[50px] pb-[50px] bg-[#F9F8FD] ">
+          <div className="mx-10 custom-max-950:mx-3 pt-[50px] pb-[50px] bg-[#F9F8FD] ">
             <div className="border-2 rounded-lg ">
               {tabData[selected].tab.map((data, i) => {
                 return (

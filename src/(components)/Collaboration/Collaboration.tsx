@@ -1,13 +1,12 @@
-import React from "react";
+import Image from "next/image";
 import image1 from "../../../public/assets/images/collaborate-callout.png";
 import image2 from "../../../public/assets/images/collaborate.avif";
-import Image from "next/image";
 
 export default function Collaboration() {
   return (
     <>
-      <div className="flex max-[950px]:hidden    justify-around mt-[70px] overflow-hidden   my-[100px]">
-        <div className="ml-[150px] max-[1286px]:ml-[50px] max-[1135px]:max-[1286px]:ml-[20px]">
+      <div className="flex custom-max-950:hidden    justify-around mt-[70px] overflow-hidden   my-[100px]">
+        <div className="ml-[150px] custom-max-1286:ml-[50px] ">
           <h1 className="text-[34px] font-[900]  text-transparent bg-primary-gradient bg-clip-text my-2 ">
             Improve collaboration
           </h1>
@@ -45,17 +44,17 @@ export default function Collaboration() {
           <Image
             src={image2}
             alt="image"
-            className="absolute left-[20px] max-[1138px]:left-[100px] top-[2%]  max-w-[862px] "
+            className="absolute left-[20px] custom-max-1138:left-[100px] top-[2%]  max-w-[862px] "
           />
-          <div className="bg-primary-gradient absolute left-[1%] max-[1138px]:left-[12%]  rounded-xl h-[574px] w-[862px] -z-10 " />
+          <div className="bg-primary-gradient absolute left-[1%] custom-max-1138:left-[12%]  rounded-xl h-[574px] w-[862px] -z-10 " />
           <Image
             src={image1}
             alt="image"
-            className="absolute top-[20%] h-96 right-[63%] max-w-80  max-[1138px]:right-[50%]"
+            className="absolute top-[20%] h-96 right-[63%] max-w-80  custom-max-1138:right-[50%]"
           />
         </div>
       </div>
-      <div className="flex justify-center items-center flex-col gap-3 mt-10 min-[950px]:hidden max-[500px]:mx-[10px] mb-[60px]">
+      <div className="flex justify-center items-center flex-col gap-3 mt-10 custom-min-950:hidden custom-max-500:mx-[10px] mb-[60px]">
         <div className="max-w-[460px] bg-pink-blue-gradient p-[25px] font-semibold rounded-lg ">
           <h1 className="text-white text-[23px] leading-[30px] mb-[13px] font-extrabold font-[family-name:var(--font-axiforma-sans)]">
             Improve Collaboration

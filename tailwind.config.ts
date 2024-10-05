@@ -9,16 +9,49 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "custom-max-1390": { max: "1390px" },
+        "custom-max-1286": { max: "1286px" },
+        "custom-max-1200": { max: "1200px" },
+        "custom-min-1200": { min: "1200px" },
+        "custom-max-1180": { max: "1180px" },
+        "custom-max-1177": { max: "1177px" },
+        "custom-max-1150": { max: "1150px" },
+        "custom-max-1138": { max: "1138px" },
+        "custom-max-1135": { max: "1135px" },
+        "custom-max-1112": { max: "1112px" },
+        "custom-max-1082": { max: "1082px" },
+        "custom-min-1012": { min: "1012px" },
+        "custom-max-1000": { max: "1000px" },
+        "custom-max-1050": { max: "1050px" },
+        "custom-max-1060": { max: "1060px" },
+        "custom-max-1045": { max: "1045px" },
+        "custom-max-1040": { max: "1040px" },
+        "custom-max-1012": { max: "1012px" },
+        "custom-max-980": { max: "980px" },
+        "custom-max-975": { max: "975px" },
+        "custom-max-950": { max: "950px" },
+        "custom-min-950": { min: "950px" },
+        "custom-max-900": { max: "900px" },
+        "custom-max-850": { max: "850px" },
+        "custom-max-800": { max: "800px" },
+        "custom-max-770": { max: "770px" },
+        "custom-max-700": { max: "700px" },
+        "custom-min-700": { min: "700px" },
+        "custom-max-600": { max: "600px" },
+        "custom-min-966": { min: "966px" },
+        "custom-max-500": { max: "500px" },
+      },
       boxShadow: {
-        'custom-shadow': '0 3px 5px 0 rgba(67, 46, 134, 0.05)',
-        'purple-shadow': '0px 3px 3px 0px rgba(119,18,252,0);',
+        "custom-shadow": "0 3px 5px 0 rgba(67, 46, 134, 0.05)",
+        "purple-shadow": "0px 3px 3px 0px rgba(119,18,252,0);",
       },
       fontFamily: {
-        axiforma: ['Axiforma',"sans"],
+        axiforma: ["Axiforma", "sans"],
       },
       backgroundImage: {
-        'primary-image': "url('/assets/images/hOMQep.svg')",
-        'ai-image': "url('/assets/images/ai-bg-asset.png')",
+        "primary-image": "url('/assets/images/hOMQep.svg')",
+        "ai-image": "url('/assets/images/ai-bg-asset.png')",
         "primary-gradient":
           "linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5)",
         "grey-gradient":
@@ -45,6 +78,8 @@ const config: Config = {
           "linear-gradient(186.32deg, #ff22ca -92.99%, rgba(255, 34, 202, 0) 13.97%)",
         "small-green-gradient":
           "linear-gradient(186.32deg,#21c828 -92.99%,#fff 13.97%)",
+        "task-purple-gradient":
+          "linear-gradient(263deg, #FA12E3 -35%, #7612FA 41%, #12d0fa 135%);",
       },
       colors: {
         background: "var(--background)",

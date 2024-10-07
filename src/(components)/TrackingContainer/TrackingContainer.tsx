@@ -40,6 +40,7 @@ export default function TrackingContainer() {
         {TrackingData.map((item, i) => {
           return (
             <TrackingSection
+            key={i}
               title={item.title}
               span={item.span}
               image={item.image}

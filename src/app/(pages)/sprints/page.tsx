@@ -1,7 +1,5 @@
-import React from "react";
 import image3 from "../../../../public/assets/images/sprints1.avif";
 
-import { StaticImageData } from "next/image";
 import TasksHero from "@/(components)/TasksHero/TasksHero";
 
 export default function Sprints() {

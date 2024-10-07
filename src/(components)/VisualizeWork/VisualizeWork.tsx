@@ -34,7 +34,7 @@ export default function VisualizeWork({ taskFeaturesData }: WhyTaskProps) {
         <div className="flex flex-col md:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {taskFeaturesData.slice(0, 3).map((item, i) => {
             return (
-              <div className="md:w-1/3 custom-max-900:max-w-[500px]">
+              <div key={i} className="md:w-1/3 custom-max-900:max-w-[500px]">
                 <Image
                   src={item.image}
                   alt="image"
@@ -55,7 +55,7 @@ export default function VisualizeWork({ taskFeaturesData }: WhyTaskProps) {
         <div className="flex flex-col md:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {taskFeaturesData.slice(3, 5).map((item, i) => {
             return (
-              <div className="w-full md:w-1/2">
+              <div key={i} className="w-full md:w-1/2">
                 <Image
                   src={item.image}
                   alt="image"
@@ -76,7 +76,7 @@ export default function VisualizeWork({ taskFeaturesData }: WhyTaskProps) {
         <div className="flex flex-col md:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {taskFeaturesData.slice(5, 8).map((item, i) => {
             return (
-              <div className="md:w-1/3 custom-max-900:max-w-[500px]">
+              <div key={i} className="md:w-1/3 custom-max-900:max-w-[500px]">
                 <Image
                   src={item.image}
                   alt="image"
@@ -97,7 +97,7 @@ export default function VisualizeWork({ taskFeaturesData }: WhyTaskProps) {
         <div className="flex flex-col lg:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {taskFeaturesData.slice(8, 9).map((item, i) => {
             return (
-              <div className="w-full flex lg:flex-row flex-col rounded-[16px] h-auto border-[1px]">
+              <div key={i} className="w-full flex lg:flex-row flex-col rounded-[16px] h-auto border-[1px]">
                 <div className="w-full lg:w-[50%] h-[275px] lg:h-auto">
                   <Image
                     src={item.image}

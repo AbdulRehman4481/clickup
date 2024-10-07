@@ -33,7 +33,7 @@ export default function WhyCharts({
         <div className="flex flex-col md:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {chartsData.slice(0, 2).map((item, i) => {
             return (
-              <div className="w-full md:w-1/2">
+              <div key={i} className="w-full md:w-1/2">
                 <Image
                   src={item.image}
                   alt="image"
@@ -54,7 +54,7 @@ export default function WhyCharts({
         <div className="flex flex-col md:flex-row md:gap-6 max-w-[1080px] gap-6 w-full py-[20px]">
           {chartsData.slice(2, 5).map((item, i) => {
             return (
-              <div className="md:w-1/3 custom-max-900:max-w-[500px]">
+              <div key={i} className="md:w-1/3 custom-max-900:max-w-[500px]">
                 <Image
                   src={item.image}
                   alt="image"

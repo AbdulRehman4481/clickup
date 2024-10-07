@@ -25,6 +25,7 @@ import { TbLayoutDashboard } from "react-icons/tb";
 type Item = {
   icon: JSX.Element;
   title: string;
+  link:string;
 };
 
 interface ProductTabsType {
@@ -47,7 +48,7 @@ const DropDownSection = ({ title, items }: DropDownSectionType) => {
         {items.map((item, i) => {
           return (
             <a
-            href="tasks"
+            href={item.link}
               key={i}
               
               className="text-[#514B81]  text-sm font-normal rounded-md hover:bg-[#CECEEA]/30 py-[4px] mb-1 font-[family-name:var(--font-axiforma-sans)] hover:text-black cursor-pointer flex "
@@ -137,7 +138,7 @@ export default function DropDown1() {
   return (
     <>
       <div className="absolute  flex justify-center top-14  rounded-[14px]  custom-max-1012:hidden z-50 ">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1082:w-[1040px] custom-max-1045:w-[1010px]  rounded-[14px]">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1100:w-[1040px] custom-max-1060:w-[1010px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
               {ProductTabs.map((item, i) => {

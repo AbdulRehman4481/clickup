@@ -15,10 +15,6 @@ import { ReactNode, useState } from "react";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { FaArrowRightLong, FaChevronDown } from "react-icons/fa6";
 import { RiTeamLine } from "react-icons/ri";
-type Item = {
-  icon: JSX.Element;
-  title: string;
-};
 
 interface dataType {
   data: companyType[];
@@ -57,10 +53,13 @@ const TemplateSection = () => {
         <div className="grid grid-cols-3 gap-4">
           {TemplateData.map((item, i) => {
             return (
-              <Card key={i} className=" max-w-[260px] shadow-md  border-[0.8px] border-[#524b81]/20 rounded-[14px] p-[10px] ">
+              <Card
+                key={i}
+                className=" max-w-[260px] shadow-md  border-[0.8px] border-[#524b81]/20 rounded-[14px] p-[10px] "
+              >
                 <CardHeader className=" flex-col items-start ">
                   <Image
-                  alt="Card background"
+                    alt="Card background"
                     className="object-cover rounded-xl border-b-[0.8px] border-[#524b81]/20"
                     src={item.icon}
                     width={270}
@@ -112,7 +111,7 @@ export default function DropDown2() {
   return (
     <>
       <div className="absolute  flex justify-center top-14  rounded-[14px]  custom-max-1012:hidden z-50 ">
-        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1082:w-[1040px] custom-max-1045:w-[1010px]  rounded-[14px]">
+        <div className="bg-white shadow-lg border-1 border-[#CECEEA] transition-all duration-500 ease-in-out  w-[1080px] custom-max-1100:w-[1040px] custom-max-1060:w-[1010px]  rounded-[14px]">
           <div className="flex ">
             <div className="pt-4 pl-4 pr-4">
               {SloutionsTab.map((item, i) => {

@@ -1,13 +1,12 @@
-import React from "react";
-import tik from "../../../public/assets/images/greenTik.svg";
-import cross from "../../../public/assets/images/cross.svg";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import cross from "../../../public/assets/images/cross.svg";
+import tik from "../../../public/assets/images/greenTik.svg";
 export default function TasksDifference() {
   return (
-    <div className="flex flex-col items-center p-4  px-[10px] ">
+    <div className="flex flex-col items-center p-4  my-[60px] px-[10px] ">
       <h1 className="font-[family-name:var(--font-axiforma-sans)] text-[41px] font-[900] leading-[51px] text-center mb-1 ">
-        The secret to your team's success
+        The secret to your team&apos;s success
       </h1>
       <p className="text-[18px] sm:text-lg text-center mb-10">
         ClickUp is the difference between chaotic projects and seamless

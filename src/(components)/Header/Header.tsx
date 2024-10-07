@@ -32,8 +32,8 @@ export default function Header() {
   return (
     <>
     
-      <div className="flex justify-center sticky  custom-max-1200:px-[40px] top-[20px] z-50  ">
-        <div className="flex relative flex-row justify-between w-[1080px] transition-all duration-500 ease-in-out custom-max-1082:w-[1040px] custom-max-1045:w-[1010px]    ">
+      <div className="flex justify-center sticky   top-[20px] z-50  ">
+        <div className="flex relative flex-row justify-between w-[1080px] transition-all duration-500 ease-in-out custom-max-1100:w-[1040px] custom-max-1060:w-[1010px]    ">
           <div className="flex ">
             <div className="flex bg-white shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]  justify-around mr-[10px] items-center  custom-max-500:w-[100px] border border-[#CECEEA]    py-[5px] px-[13px]  pr-4 rounded-[14px] h-[46px]">
               <Image src={logo} width={85} height={21} alt="logo" />

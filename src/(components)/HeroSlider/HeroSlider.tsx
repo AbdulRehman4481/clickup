@@ -47,7 +47,7 @@ export default function HeroSlider() {
   return (
     <div className="bg-secondary-gradient mt-[50px]" >
       <div className="flex justify-center items-center">
-        <div className="relative flex justify-center items-center  w-[900px] overflow-hidden h-[150px]">
+        <div className="relative flex justify-center items-center  w-[900px] slider-indicator overflow-hidden h-[150px]">
           <div className="flex transition-all duration-500 ease-in-out">
             {icons.map((item, index) => (
               <div

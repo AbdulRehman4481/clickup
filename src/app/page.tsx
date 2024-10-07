@@ -1,4 +1,5 @@
 import Collaboration from "@/(components)/Collaboration/Collaboration";
+import Footer from "@/(components)/Footer/Footer";
 import Hero from "@/(components)/Hero/Hero";
 import OpenAi from "@/(components)/OpenAi/OpenAi";
 import Tabs from "@/(components)/Tabs/Tabs";
@@ -14,6 +15,7 @@ export default function Home() {
       <VideoSlider />
       <Tabs />
       <Work />
+      <Footer />
     </>
   );
 }

@@ -17,6 +17,17 @@
   }
 }
 
+
+.slider-indicator {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+}
+
 .no-scroll {
   position: fixed;
   overflow-y: scroll;

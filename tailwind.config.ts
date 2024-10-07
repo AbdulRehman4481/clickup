@@ -20,6 +20,7 @@ const config: Config = {
         "custom-max-1138": { max: "1138px" },
         "custom-max-1135": { max: "1135px" },
         "custom-max-1112": { max: "1112px" },
+        "custom-max-1100": { max: "1100px" },
         "custom-max-1082": { max: "1082px" },
         "custom-min-1012": { min: "1012px" },
         "custom-max-1000": { max: "1000px" },
@@ -33,6 +34,7 @@ const config: Config = {
         "custom-max-950": { max: "950px" },
         "custom-min-950": { min: "950px" },
         "custom-max-900": { max: "900px" },
+        "custom-min-900": { min: "900px" },
         "custom-max-850": { max: "850px" },
         "custom-max-800": { max: "800px" },
         "custom-max-770": { max: "770px" },
@@ -80,6 +82,8 @@ const config: Config = {
           "linear-gradient(186.32deg,#21c828 -92.99%,#fff 13.97%)",
         "task-purple-gradient":
           "linear-gradient(263deg, #FA12E3 -35%, #7612FA 41%, #12d0fa 135%);",
+        "dark-purple-gradient":
+          "linear-gradient(136deg, #fa12e3 -76%, #101f52 85%);",
       },
       colors: {
         background: "var(--background)",

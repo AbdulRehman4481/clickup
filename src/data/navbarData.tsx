@@ -80,36 +80,44 @@ export const projectManagementItems = [
   {
     icon: <MdTask />,
     title: "Tasks",
+    link: "tasks",
   },
   {
     icon: <CgWebsite />,
     title: "Portfolios",
+    link: "portfolios",
   },
   {
     icon: <CiViewBoard />,
     title: "Board Views",
+    link: "Kanban",
   },
   {
     icon: <IoStatsChartSharp />,
     title: "Gantt charts",
+    link: "charts",
   },
 ];
 export const resourceManagementItems = [
   {
     icon: <LuAlarmClock />,
     title: "Time tracking",
+    link: "charts",
   },
   {
     icon: <RiBodyScanFill />,
+    link: "charts",
     title: "Workload views",
   },
-
+  
   {
     icon: <FaFlag />,
+    link: "charts",
     title: "Goals",
   },
   {
     icon: <RiDashboard2Line />,
+    link: "charts",
     title: "Dashboards",
   },
 ];
@@ -117,37 +125,45 @@ export const resourceManagementItems = [
 export const projectDevelopmentItems = [
   {
     icon: <FaArrowsRotate />,
+    link: "sprints",
     title: "Sprints",
   },
   {
     icon: <BiSolidPieChartAlt2 />,
+    link: "sprints",
     title: "Sprints Reports",
   },
   {
     icon: <BsKanban />,
+    link: "kanban",
     title: "Kanban",
   },
   {
     icon: <MdRebaseEdit />,
     title: "Roadmap & Backlog",
+    link: "kanban",
   },
 ];
 
 export const collaborationItems = [
   {
     icon: <SiGoogledocs />,
+    link: "kanban",
     title: "Docs",
   },
   {
     icon: <CiViewList />,
+    link: "kanban",
     title: "WhiteBoards",
   },
   {
     icon: <FaChartGantt />,
+    link: "charts",
     title: "Charts",
   },
   {
     icon: <LuInbox />,
+    link: "kanban",
     title: "Inbox",
   },
 ];
@@ -155,18 +171,22 @@ export const collaborationItems = [
 export const knowledgeManagementItems = [
   {
     icon: <SiGoogledocs />,
+    link: "kanban",
     title: "Docs",
   },
   {
     icon: <SiWikipedia />,
     title: "Wikis",
+    link: "kanban",
   },
   {
     icon: <GiArtificialIntelligence />,
+    link: "kanban",
     title: "Ask AI",
   },
   {
     icon: <IoMdSearch />,
+    link: "kanban",
     title: "Connected search",
   },
 ];
@@ -174,18 +194,22 @@ export const knowledgeManagementItems = [
 export const workflowsItems = [
   {
     icon: <TbSettingsAutomation />,
+    link: "kanban",
     title: "Automations",
   },
   {
     icon: <FaWpforms />,
+    link: "kanban",
     title: "Forms",
   },
   {
     icon: <RxInput />,
+    link: "kanban",
     title: "Custom fields",
   },
   {
     icon: <TbStatusChange />,
+    link: "kanban",
     title: "Custom statuses",
   },
 ];
